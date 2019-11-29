@@ -250,13 +250,11 @@ class LocalizedMatrixLvqCounterfactual(LvqCounterfactualBase):
 
         # Solve a bunch of CCPs
         n_iter = 0
-        while tao < tao_max:
+        while cur_tao < tao_max:
             xcf_ = self.solve_aux(xcf, cur_tao, x_orig, y_target, target_prototype, target_omega, other_prototypes, other_omegas, mad, features_whitelist)
 
             if y_target == self.model.predict([xcf_])[0]:
                 xcf = xcf_
-            else:
-                break
 
             # Increase penalty parameter
             cur_tao *= mu
