@@ -18,3 +18,7 @@ MIT license - See [LICENSE.md](LICENSE.md)
 ## How to cite
 
 You can cite the version on [arXiv](https://arxiv.org/abs/1908.00735).
+
+## Conference paper
+
+A short version of this paper has been accepted as a conference paper at ESANN-2020.
