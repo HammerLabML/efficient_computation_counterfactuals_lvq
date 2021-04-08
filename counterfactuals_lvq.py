@@ -52,7 +52,7 @@ class MatrixLvqCounterfactual(LvqCounterfactualBase):
         k = 0
         for k in range(len(other_prototypes)):
             p_j = other_prototypes[k]
-            G.append(0.5 * np.dot(Omega, p_j - p_i))
+            G.append(np.dot(Omega, p_j - p_i))
             b[k] = -0.5 * (np.dot(p_i, np.dot(Omega, p_i)) - np.dot(p_j, np.dot(Omega, p_j)))
         G = np.array(G)
 
